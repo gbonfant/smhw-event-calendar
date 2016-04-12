@@ -1,4 +1,5 @@
 # smhw-event-calendar
+![](https://dl.dropboxusercontent.com/u/7683822/output.gif)
 
 Running the app
 ====
