@@ -1,7 +1,24 @@
 <h1>Events calendar</h1>
 
-<%= link_to 'Create event' %>
+<div>
+  <%= form_for @event do |f| %>
+    <div>
+      <%= f.label :title, 'Title' %>
+      <%= f.text_field :title, placeholder: 'New Event' %>
+    </div>
 
-<!-- Remove the following image tag and add the markup to create a basic weekly calendar -->
-<%= image_tag 'events_calendar', width: '100%' %>
+    <div>
+      <%= f.label :start_date, 'Start date' %>
+      <%= f.datetime_select :start_date %>
+    </div>
 
+    <div>
+      <%= f.label :end_date, 'End date' %>
+      <%= f.datetime_select :end_date %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+</div>
+
+<div id="calendar"> </div>
